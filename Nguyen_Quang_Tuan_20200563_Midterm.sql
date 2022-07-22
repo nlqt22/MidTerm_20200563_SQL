@@ -134,13 +134,13 @@ WHERE TenSV = N'Nguyễn Văn Nam' AND QueQuan = N'Bắc Giang';
 
 /*
 CREATE VIEW v_HuongDan AS
-SELECT dt.TenDT, sv.TenSV, gv.HoTen, hd.NamThucHien, hd.KetQua
+SELECT dt.TenDT, sv.TenSV, gv.HoTen as 'TenGV', hd.NamThucHien, hd.KetQua
 FROM HuongDan hd
 JOIN DeTai dt ON hd.DT# = dt.DT#
 JOIN SinhVien sv ON hd.SV# = sv.SV#
 JOIN GiangVien gv ON hd.GV# = gv.GV#;
 */
-SELECT * FROM v_HuongDan;
+SELECT * FROM v_HuongDan WHERE NamThucHien = 2022;
 
 /*
 
